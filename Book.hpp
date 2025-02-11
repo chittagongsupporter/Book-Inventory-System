@@ -10,6 +10,10 @@ public:
   Book();
   Book(std::string title, std::string author, std::string isbn);
 
+  /// Move operations:
+  Book(Book&&) = default;
+  Book& operator=(Book&&) = default;
+
   /// Getters:
   std::string getTitle() const;
   std::string getAuthor() const;
