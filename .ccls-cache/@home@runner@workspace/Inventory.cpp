@@ -23,6 +23,10 @@ void Inventory::setBookList(std::vector<Book> &&bookList) {
 }
 
 // Member functions:
+
+// addBook copy overload
+void Inventory::addBook(const Book &book) { books.push_back(book); }
+// addBook move overload
 void Inventory::addBook(Book &&book) { books.push_back(std::move(book)); }
 
 void Inventory::removeBook(const std::string &isbn) {

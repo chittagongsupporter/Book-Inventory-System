@@ -19,7 +19,9 @@ public:
   void setBookList(std::vector<Book>&& bookList); // move overload
 
   /// Member functions:
-  void addBook(Book&& book);
+  void addBook(const Book& book);  // copy overload
+  void addBook(Book&& book); // move overload
+
   void removeBook(const std::string& isbn);
 
   std::vector<Book> searchBookByTitle(const std::string& title) const;
