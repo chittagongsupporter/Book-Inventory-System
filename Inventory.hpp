@@ -11,6 +11,9 @@ public:
   Inventory();
   Inventory(std::vector<Book> bookList);
 
+  /// Destructor:
+  ~Inventory() = default;
+
   /// Getters:
   const std::vector<Book>& getBookList() const;
 
