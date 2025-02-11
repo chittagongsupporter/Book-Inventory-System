@@ -14,8 +14,13 @@ void Inventory::setBookList(std::vector<Book> bookList) { books = bookList; }
 void Inventory::addBook(Book book) { books.push_back(book); }
 
 void Inventory::removeBook(Book book) {
-  for (auto it = books.begin(); it != books.end(); ++it) 
-    if (it->getISBN() == book.getISBN()) books.erase(it);
+  for (auto it = books.begin(); it != books.end();) {
+    if (it->getISBN() == book.getISBN()) {
+      it = books.erase(it);
+    } else {
+      it++;
+    }
+  }
 }
 
 std::vector<Book> Inventory::searchBookByTitle(std::string title) const {
