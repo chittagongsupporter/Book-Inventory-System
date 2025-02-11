@@ -6,23 +6,23 @@
 class Book
 {
 public:
-  // Constructors
+  /// Constructors:
   Book();
   Book(std::string title, std::string author, std::string isbn);
 
-  // Getters
+  /// Getters:
   std::string getTitle() const;
   std::string getAuthor() const;
   std::string getISBN() const;
 
-  // Setters
+  /// Setters:
   void setTitle(std::string title);
   void setAuthor(std::string author);
   void setISBN(std::string isbn);
 
-  // Member functions
+  /// Member functions:
 
-  // Converts book information to string
+  /// Converts book information to string
   std::string toString() const;
 
 private:
