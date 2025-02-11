@@ -6,6 +6,21 @@
 class Book
 {
 public:
+  // Constructors
+  Book();
+  Book(std::string title, std::string author, std::string isbn);
+
+  // Getters
+  std::string getTitle() const;
+  std::string getAuthor() const;
+  std::string getISBN() const;
+
+  // Setters
+  void setTitle(std::string title);
+  void setAuthor(std::string author);
+  void setISBN(std::string isbn);
+
+  // Member functions
 
 private:
 	std::string title;
