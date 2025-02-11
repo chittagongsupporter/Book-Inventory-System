@@ -22,6 +22,9 @@ public:
 
   // Member functions
 
+  // Converts book information to string
+  std::string toString() const;
+
 private:
 	std::string title;
   std::string author;
