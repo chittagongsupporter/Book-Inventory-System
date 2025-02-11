@@ -10,6 +10,13 @@ public:
   /// Constructors:
   Inventory();
   Inventory(std::vector<Book> bookList);
+
+  /// Getters:
+  std::vector<Book> getBookList() const;
+
+  /// Setters:
+  void setBookList(std::vector<Book> bookList);
+
 private:
  std::vector<Book> books;
 };
