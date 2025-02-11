@@ -15,9 +15,9 @@ public:
   Book& operator=(Book&&) = default;
 
   /// Getters:
-  std::string getTitle() const;
-  std::string getAuthor() const;
-  std::string getISBN() const;
+  std::string& getTitle() const;
+  std::string& getAuthor() const;
+  std::string& getISBN() const;
 
   /// Setters:
   void setTitle(const std::string &title);

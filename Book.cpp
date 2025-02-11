@@ -3,7 +3,8 @@
 // Constructors:
 Book::Book() : title(""), author(""), isbn("") {}
 Book::Book(std::string title, std::string author, std::string isbn)
-    : title(title), author(author), isbn(isbn) {}
+    : title(std::move(title)), author(std::move(author)),
+      isbn(std::move(isbn)) {}
 
 // Getters:
 std::string Book::getTitle() const { return title; }
