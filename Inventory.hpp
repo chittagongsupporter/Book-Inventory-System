@@ -7,6 +7,9 @@
 class Inventory
 {
 public:
+  /// Constructors:
+  Inventory();
+  Inventory(std::vector<Book> bookList);
 private:
  std::vector<Book> books;
 };
