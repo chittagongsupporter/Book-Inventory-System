@@ -1,4 +1,5 @@
 #include "Inventory.hpp"
+#include <algorithm>
 #include <iostream>
 
 // Constructors:
@@ -13,14 +14,16 @@ void Inventory::setBookList(std::vector<Book> bookList) { books = bookList; }
 // Member functions:
 void Inventory::addBook(Book book) { books.push_back(book); }
 
-void Inventory::removeBook(Book book) {
-  for (auto it = books.begin(); it != books.end();) {
-    if (it->getISBN() == book.getISBN()) {
-      it = books.erase(it);
-    } else {
-      it++;
-    }
-  }
+void Inventory::removeBook(Book bookToRemove) {
+  // Lambda fn to check if a book has the same ISBN as the target
+  auto hasMatchingISBN = [&bookToRemove](const Book &currentBookInVector) {
+    return currentBookInVector.getISBN() == bookToRemove.getISBN();
+  };
+
+  auto newEndIterator =
+      std::remove_if(books.begin(), books.end(), hasMatchingISBN);
+
+  books.erase(newEndIterator, books.end());
 }
 
 std::vector<Book> Inventory::searchBookByTitle(std::string title) const {
