@@ -8,8 +8,13 @@ Inventory::Inventory(std::vector<Book> bookList) : books(bookList) {}
 
 // Getters:
 const std::vector<Book> &Inventory::getBookList() const { return books; }
-// Setters:
-void Inventory::setBookList(std::vector<Book> bookList) { books = bookList; }
+
+void Inventory::setBookList(std::vector<Book> &&bookList) {
+  // Move contents of 'bookList' to 'books'
+  books = std::move(bookList);
+  // Ensure memory is released
+  std::vector<Book>().swap(bookList);
+}
 
 // Member functions:
 void Inventory::addBook(Book book) { books.push_back(book); }
