@@ -11,9 +11,9 @@ std::string Book::getAuthor() const { return author; }
 std::string Book::getISBN() const { return isbn; }
 
 // Setters:
-void Book::setTitle(std::string title) { this->title = title; }
-void Book::setAuthor(std::string author) { this->author = author; }
-void Book::setISBN(std::string isbn) { this->isbn = isbn; }
+void Book::setTitle(const std::string &title) { this->title = title; }
+void Book::setAuthor(const std::string &author) { this->author = author; }
+void Book::setISBN(const std::string &isbn) { this->isbn = isbn; }
 
 // Member functions:
 std::string Book::toString() const {

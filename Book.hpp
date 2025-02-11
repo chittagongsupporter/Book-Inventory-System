@@ -16,9 +16,9 @@ public:
   std::string getISBN() const;
 
   /// Setters:
-  void setTitle(std::string title);
-  void setAuthor(std::string author);
-  void setISBN(std::string isbn);
+  void setTitle(const std::string &title);
+  void setAuthor(const std::string &author);
+  void setISBN(const std::string &isbn);
 
   /// Member functions:
 
