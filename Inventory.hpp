@@ -19,7 +19,7 @@ public:
 
   /// Member functions:
   void addBook(Book book);
-  void removeBook(Book book);
+  void removeBook(const std::string& isbn);
 
   std::vector<Book> searchBookByTitle(std::string title) const;
   std::vector<Book> searchBookByAuthor(std::string author) const;
