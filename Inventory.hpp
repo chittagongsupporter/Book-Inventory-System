@@ -8,6 +8,7 @@ class Inventory
 {
 public:
 private:
+ std::vector<Book> books;
 };
 
 #endif // INVENTORY_HPP
