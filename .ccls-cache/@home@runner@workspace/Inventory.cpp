@@ -7,7 +7,7 @@ Inventory::Inventory() {}
 Inventory::Inventory(std::vector<Book> bookList) : books(bookList) {}
 
 // Getters:
-std::vector<Book> Inventory::getBookList() const { return books; }
+const std::vector<Book> &Inventory::getBookList() const { return books; }
 // Setters:
 void Inventory::setBookList(std::vector<Book> bookList) { books = bookList; }
 
