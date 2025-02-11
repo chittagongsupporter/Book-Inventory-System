@@ -15,7 +15,7 @@ public:
   const std::vector<Book>& getBookList() const;
 
   /// Setters:
-  void setBookList(std::vector<Book> bookList);
+  void setBookList(std::vector<Book> &&bookList);
 
   /// Member functions:
   void addBook(Book book);
