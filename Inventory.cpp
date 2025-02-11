@@ -19,15 +19,13 @@ void Inventory::setBookList(std::vector<Book> &&bookList) {
 // Member functions:
 void Inventory::addBook(Book book) { books.push_back(book); }
 
-void Inventory::removeBook(Book bookToRemove) {
+void Inventory::removeBook(const std::string &isbn) {
   // Lambda fn to check if a book has the same ISBN as the target
-  auto hasMatchingISBN = [&bookToRemove](const Book &currentBookInVector) {
-    return currentBookInVector.getISBN() == bookToRemove.getISBN();
+  auto hasMatchingISBN = [&isbn](const Book &currentBookInVector) {
+    return currentBookInVector.getISBN() == isbn;
   };
-
   auto newEndIterator =
       std::remove_if(books.begin(), books.end(), hasMatchingISBN);
-
   books.erase(newEndIterator, books.end());
 }
 
