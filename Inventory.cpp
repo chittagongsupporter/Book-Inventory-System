@@ -17,7 +17,7 @@ void Inventory::setBookList(std::vector<Book> &&bookList) {
 }
 
 // Member functions:
-void Inventory::addBook(Book book) { books.push_back(book); }
+void Inventory::addBook(Book &&book) { books.push_back(std::move(book)); }
 
 void Inventory::removeBook(const std::string &isbn) {
   // Lambda fn to check if a book has the same ISBN as the target

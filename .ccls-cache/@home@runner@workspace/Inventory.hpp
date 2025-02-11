@@ -18,7 +18,7 @@ public:
   void setBookList(std::vector<Book> &&bookList);
 
   /// Member functions:
-  void addBook(Book book);
+  void addBook(Book&& book);
   void removeBook(const std::string& isbn);
 
   std::vector<Book> searchBookByTitle(std::string title) const;
