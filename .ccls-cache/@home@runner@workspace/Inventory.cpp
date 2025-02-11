@@ -4,7 +4,7 @@
 
 // Constructors:
 Inventory::Inventory() {}
-Inventory::Inventory(std::vector<Book> bookList) : books(bookList) {}
+Inventory::Inventory(std::vector<Book> bookList) : books(std::move(bookList)) {}
 
 // Getters:
 const std::vector<Book> &Inventory::getBookList() const { return books; }
