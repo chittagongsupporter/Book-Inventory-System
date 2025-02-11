@@ -20,6 +20,13 @@ public:
   /// Member functions:
   void addBook(Book book);
   void removeBook(Book book);
+
+  std::vector<Book> searchBookByTitle(std::string title) const;
+  std::vector<Book> searchBookByAuthor(std::string author) const;
+  std::vector<Book> searchBookByISBN(std::string isbn) const;
+
+  size_t getBookCount() const;
+
   void printInventory() const;
 
 private:
