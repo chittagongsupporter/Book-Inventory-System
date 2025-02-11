@@ -6,9 +6,15 @@
 Inventory::Inventory() {}
 Inventory::Inventory(std::vector<Book> bookList) : books(std::move(bookList)) {}
 
-// Getters:
+// Getter:
 const std::vector<Book> &Inventory::getBookList() const { return books; }
 
+// Setters:
+// move overload
+void Inventory::setBookList(const std::vector<Book> &bookList) {
+  books = bookList;
+}
+// copy overload
 void Inventory::setBookList(std::vector<Book> &&bookList) {
   // Move contents of 'bookList' to 'books'
   books = std::move(bookList);
