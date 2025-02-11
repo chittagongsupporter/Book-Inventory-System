@@ -1,7 +1,7 @@
 #include "Book.hpp"
 #include <iostream>
 
-int main() {
+void testBookObject() {
   Book book1("The Great Gatsby", "F. Scott Fitzgerald", "978-3-16-148410-0");
 
   // Test getters
@@ -15,4 +15,8 @@ int main() {
   book1.setISBN("978-0-393-72564-8");
   // Test toString()
   std::cout << book1.toString() << std::endl;
+}
+
+int main() {
+  testBookObject();
 }
