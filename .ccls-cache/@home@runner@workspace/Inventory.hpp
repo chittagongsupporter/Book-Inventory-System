@@ -22,9 +22,9 @@ public:
   void addBook(Book&& book);
   void removeBook(const std::string& isbn);
 
-  std::vector<Book> searchBookByTitle(std::string title) const;
-  std::vector<Book> searchBookByAuthor(std::string author) const;
-  std::vector<Book> searchBookByISBN(std::string isbn) const;
+  std::vector<Book> searchBookByTitle(const std::string& title) const;
+  std::vector<Book> searchBookByAuthor(const std::string& author) const;
+  std::vector<Book> searchBookByISBN(const std::string& isbn) const;
 
   size_t getBookCount() const;
 

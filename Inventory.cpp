@@ -35,7 +35,7 @@ void Inventory::removeBook(const std::string &isbn) {
   books.erase(newEndIterator, books.end());
 }
 
-std::vector<Book> Inventory::searchBookByTitle(std::string title) const {
+std::vector<Book> Inventory::searchBookByTitle(const std::string &title) const {
   std::vector<Book> result;
   for (const auto &book : books) {
     if (book.getTitle() == title)
@@ -44,7 +44,8 @@ std::vector<Book> Inventory::searchBookByTitle(std::string title) const {
   return result;
 }
 
-std::vector<Book> Inventory::searchBookByAuthor(std::string author) const {
+std::vector<Book>
+Inventory::searchBookByAuthor(const std::string &author) const {
   std::vector<Book> result;
   for (const auto &book : books) {
     if (book.getAuthor() == author)
@@ -53,7 +54,7 @@ std::vector<Book> Inventory::searchBookByAuthor(std::string author) const {
   return result;
 }
 
-std::vector<Book> Inventory::searchBookByISBN(std::string isbn) const {
+std::vector<Book> Inventory::searchBookByISBN(const std::string &isbn) const {
   std::vector<Book> result;
   for (const auto &book : books) {
     if (book.getISBN() == isbn)
