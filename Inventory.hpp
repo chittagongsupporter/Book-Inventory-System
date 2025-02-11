@@ -17,6 +17,11 @@ public:
   /// Setters:
   void setBookList(std::vector<Book> bookList);
 
+  /// Member functions:
+  void addBook(Book book);
+  void removeBook(Book book);
+  void printInventory() const;
+
 private:
  std::vector<Book> books;
 };
