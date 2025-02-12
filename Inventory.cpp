@@ -3,7 +3,7 @@
 #include <iostream>
 
 // Constructors:
-Inventory::Inventory() {}
+Inventory::Inventory() = default;
 Inventory::Inventory(std::vector<Book> bookList) : books(std::move(bookList)) {}
 
 // Getter:
