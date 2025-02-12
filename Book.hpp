@@ -10,9 +10,19 @@ public:
   Book();
   Book(std::string title, std::string author, std::string isbn);
 
-  /// Move operations:
-  Book(Book&&) = default;
-  Book& operator=(Book&&) = default;
+  // Explicit copy constructor
+  Book(const Book& other)
+      : title(other.title), author(other.author), isbn(other.isbn) {}
+  
+  // Explicit copy assignment operator
+  Book& operator=(const Book& other) {
+      if (this != &other) {
+          title = other.title;
+          author = other.author;
+          isbn = other.isbn;
+      }
+      return *this;
+  }
 
   /// Getters:
   const std::string& getTitle() const;
