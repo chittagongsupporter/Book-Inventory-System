@@ -1,5 +1,4 @@
-#ifndef BOOK_HPP
-#define BOOK_HPP
+#pragma once
 
 #include <string>
 
@@ -44,5 +43,3 @@ private:
   std::string author;
   std::string isbn;
 };
-
-#endif // BOOK_HPP

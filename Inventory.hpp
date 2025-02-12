@@ -1,5 +1,4 @@
-#ifndef INVENTORY_HPP
-#define INVENTORY_HPP
+#pragma once
 
 #include "Book.hpp"
 #include <vector>
@@ -38,5 +37,3 @@ public:
 private:
  std::vector<Book> books;
 };
-
-#endif // INVENTORY_HPP
