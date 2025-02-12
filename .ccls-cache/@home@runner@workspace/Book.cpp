@@ -3,12 +3,13 @@
 // Constructors:
 Book::Book() : title(""), author(""), isbn("") {}
 Book::Book(std::string title, std::string author, std::string isbn)
-    : title(title), author(author), isbn(isbn) {}
+    : title(std::move(title)), author(std::move(author)),
+      isbn(std::move(isbn)) {}
 
 // Getters:
-std::string Book::getTitle() const { return title; }
-std::string Book::getAuthor() const { return author; }
-std::string Book::getISBN() const { return isbn; }
+const std::string &Book::getTitle() const { return title; }
+const std::string &Book::getAuthor() const { return author; }
+const std::string &Book::getISBN() const { return isbn; }
 
 // Setters:
 void Book::setTitle(const std::string &title) { this->title = title; }

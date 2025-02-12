@@ -11,19 +11,25 @@ public:
   Inventory();
   Inventory(std::vector<Book> bookList);
 
-  /// Getters:
-  std::vector<Book> getBookList() const;
+  /// Destructor:
+  ~Inventory() = default;
 
-  /// Setters:
-  void setBookList(std::vector<Book> bookList);
+  /// Getters:
+  const std::vector<Book>& getBookList() const;
+
+  /// Setters
+  void setBookList(const std::vector<Book>& bookList); // copy overload
+  void setBookList(std::vector<Book>&& bookList); // move overload
 
   /// Member functions:
-  void addBook(Book book);
-  void removeBook(Book book);
+  void addBook(const Book& book);  // copy overload
+  void addBook(Book&& book); // move overload
 
-  std::vector<Book> searchBookByTitle(std::string title) const;
-  std::vector<Book> searchBookByAuthor(std::string author) const;
-  std::vector<Book> searchBookByISBN(std::string isbn) const;
+  void removeBook(const std::string& isbn);
+
+  std::vector<Book> searchBookByTitle(const std::string& title) const;
+  std::vector<Book> searchBookByAuthor(const std::string& author) const;
+  std::vector<Book> searchBookByISBN(const std::string& isbn) const;
 
   size_t getBookCount() const;
 
