@@ -16,10 +16,7 @@ void Inventory::setBookList(const std::vector<Book> &bookList) {
 }
 // move overload
 void Inventory::setBookList(std::vector<Book> &&bookList) {
-  // Move contents of 'bookList' to 'books'
   books = std::move(bookList);
-  // Ensure memory is released
-  std::vector<Book>().swap(bookList);
 }
 
 // Member functions:
