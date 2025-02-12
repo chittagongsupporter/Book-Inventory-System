@@ -14,6 +14,7 @@ void testBookObject() {
   book1.setTitle("To Kill a Mockingbird");
   book1.setAuthor("Harper Lee");
   book1.setISBN("978-0-393-72564-8");
+
   // Test toString()
   std::cout << book1.toString() << "\n" << std::endl;
 }
@@ -26,13 +27,16 @@ void testInventoryObject() {
 
   // Create Inventory object
   Inventory inventory;
+
   // Add Book objects to Inventory
   inventory.addBook(book1);
   inventory.addBook(book2);
+
   // Test getters and printInventory
   std::cout << "Number of books in inventory: " << inventory.getBookCount()
             << std::endl;
   inventory.printInventory();
+
   // Test setters
   inventory.setBookList({book3});
   std::cout << "\nNumber of books in inventory: " << inventory.getBookCount()
@@ -65,5 +69,6 @@ int main() {
 
   std::cout << "Testing inventory object: " << std::endl;
   testInventoryObject();
+
   return 0;
 }
