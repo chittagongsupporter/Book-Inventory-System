@@ -60,7 +60,7 @@ void testInventoryObject() {
 }
 
 int main() {
-  std::cout << "\nTesting book object: " << std::endl;
+  std::cout << "Testing book object: " << std::endl;
   testBookObject();
 
   std::cout << "\nTesting inventory object: " << std::endl;
